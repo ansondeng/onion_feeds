@@ -32,17 +32,6 @@ define KernelPackage/$(PKG_NAME)
   PROVIDES:=kmod-$(PKG_NAME)
 endef
 
-NOSTDINC_FLAGS = \
-	-I$(PKG_BUILD_DIR) \
-	-I$(PKG_BUILD_DIR)/include \
-	-I$(STAGING_DIR)/usr/include/mac80211-backport \
-	-I$(STAGING_DIR)/usr/include/mac80211-backport/uapi \
-	-I$(STAGING_DIR)/usr/include/mac80211 \
-	-I$(STAGING_DIR)/usr/include/mac80211/uapi \
-	-include backport/backport.h
-
-NOSTDINC_FLAGS+=-DCONFIG_IOCTL_CFG80211 -DRTW_USE_CFG80211_STA_EVENT -DBUILD_OPENWRT
-
 define KernelPackage/$(PKG_NAME)/description
   Realtek 8812AU/8821AU USB WiFi driver for AC1200 (801.11ac) Wireless Dual-Band USB Adapter
 endef
