@@ -7,13 +7,13 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=rtl8812au2
+PKG_NAME:=8812au
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/ansondeng/rtl8812au.git
 PKG_SOURCE_DATE:=2021-7-16
-PKG_SOURCE_VERSION:=e20ee51d19d0abbf1c5c6f5ab991723b9a14fc14
+PKG_SOURCE_VERSION:=b020da1c2f10f66d3a1ca6bc464d97213a1215d1
 PKG_MAINTAINER:=ansondeng <ansondeng3000@gmail.com>
 
 PKG_BUILD_PARALLEL:=1
