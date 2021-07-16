@@ -26,7 +26,7 @@ include $(INCLUDE_DIR)/package.mk
 define KernelPackage/$(PKG_NAME)
   SUBMENU:=Wireless Drivers
   TITLE:=Realtek 8812AU USB WiFi driver
-  DEPENDS:=+kmod-usb-core +@DRIVER_11N_SUPPORT +@DRIVER_11AC_SUPPORT @!LINUX_3_18 @!LINUX_4_9
+  DEPENDS:=+cfg80211 +kmod-usb-core +@DRIVER_11N_SUPPORT +@DRIVER_11AC_SUPPORT @!LINUX_3_18 @!LINUX_4_9
   FILES:=$(PKG_BUILD_DIR)/$(PKG_NAME).ko
   AUTOLOAD:=$(call AutoProbe,$(PKG_NAME))
   PROVIDES:=kmod-$(PKG_NAME)
