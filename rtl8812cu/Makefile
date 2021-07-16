@@ -45,8 +45,8 @@ define Build/Compile
 endef
 
 define KernelPackage/$(PKG_NAME)/install
-  $(INSTALL_DIR) $(1)/etc/hotplug.d/usb
-  $(INSTALL_BIN) ./files/wifi.hotplug $(1)/etc/hotplug.d/usb/30-wifi
+	$(INSTALL_DIR) $(1)/etc/hotplug.d/usb
+	$(INSTALL_BIN) ./files/wifi.hotplug $(1)/etc/hotplug.d/usb/30-wifi
 endef
 
 $(eval $(call KernelPackage,$(PKG_NAME)))
